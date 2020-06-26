@@ -3,6 +3,8 @@ extends layout
 block content
   if userId
     span User ID #{userId}
+    div
+      a.button.action(href='/session/sign_out') Sign out
   else
     a.button.action(href='/session/authenticate') Sign in
   h1= title

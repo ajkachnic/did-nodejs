@@ -35,5 +35,8 @@ router.get("/callback", function(req, res, next) {
       res.redirect("/");
     });
 });
-
+router.get('/sign_out', function(req, res) {
+  req.session = null;
+  res.redirect('/')
+})
 module.exports = router;
